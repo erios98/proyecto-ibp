@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @factibilidad_form.titulo %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @factibilidad_form.estado %>
+</p>
+
+<p>
+  <strong>Archivo:</strong>
+  <%= @factibilidad_form.archivo %>
+</p>
+
+<%= link_to 'Edit', edit_factibilidad_form_path(@factibilidad_form) %> |
+<%= link_to 'Back', factibilidad_forms_path %>

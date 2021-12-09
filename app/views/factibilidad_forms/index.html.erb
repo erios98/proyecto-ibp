@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Factibilidad Forms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Estado</th>
+      <th>Archivo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @factibilidad_forms.each do |factibilidad_form| %>
+      <tr>
+        <td><%= factibilidad_form.titulo %></td>
+        <td><%= factibilidad_form.estado %></td>
+        <td><%= factibilidad_form.archivo %></td>
+        <td><%= link_to 'Show', factibilidad_form %></td>
+        <td><%= link_to 'Edit', edit_factibilidad_form_path(factibilidad_form) %></td>
+        <td><%= link_to 'Destroy', factibilidad_form, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Factibilidad Form', new_factibilidad_form_path %>

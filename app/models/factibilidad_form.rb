@@ -1,0 +1,2 @@
+class FactibilidadForm < ApplicationRecord
+end

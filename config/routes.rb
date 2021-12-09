@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :factibilidad_forms
   root 'welcome#index'
 
   get 'welcome/index'

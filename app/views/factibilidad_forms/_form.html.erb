@@ -1,0 +1,32 @@
+<%= form_with(model: factibilidad_form) do |form| %>
+  <% if factibilidad_form.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(factibilidad_form.errors.count, "error") %> prohibited this factibilidad_form from being saved:</h2>
+
+      <ul>
+        <% factibilidad_form.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :titulo %>
+    <%= form.text_field :titulo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :estado %>
+    <%= form.text_field :estado %>
+  </div>
+
+  <div class="field">
+    <%= form.label :archivo %>
+    <%= form.text_field :archivo %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
